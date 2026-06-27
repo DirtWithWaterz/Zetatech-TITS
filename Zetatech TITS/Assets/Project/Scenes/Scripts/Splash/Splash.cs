@@ -66,6 +66,6 @@ public class Splash : MonoBehaviour
         float yield = FindFirstObjectByType<Fading>().BeginFade(1);
 
         yield return new WaitForSeconds(yield);
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Login");
     }
 }
