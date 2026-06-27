@@ -1,0 +1,50 @@
+{
+  "entries": [
+    {
+      "key": "trace",
+      "lines": [
+        "Initiating trace route...",
+        "  Hop 1: 10.0.0.1         ghost-egress-01      2ms",
+        "  Hop 2: 172.16.4.9       null-bridge-7        8ms",
+        "  Hop 3: 192.168.88.0     [REDACTED]           14ms",
+        "  Hop 4: 10.255.0.33      yama-relay-alpha     31ms",
+        "  Hop 5: 0.0.0.0          [SPOOFED NODE]       ***",
+        "! Warning: trace terminated at encrypted relay.",
+        "Origin masked — 7-layer obfuscation confirmed.",
+        "Trace complete."
+      ]
+    },
+    {
+      "key": "decrypt",
+      "lines": [
+        "Loading cipher suite...",
+        "  Algorithm: AES-512-GCM with quantum salt",
+        "  Key source: /dev/quantum entropy pool",
+        "  IV: randomised per-packet",
+        "Decrypting payload...",
+        "  Block 1/4... [OK]",
+        "  Block 2/4... [OK]",
+        "  Block 3/4... [OK]",
+        "  Block 4/4... [OK]",
+        "! Checksum mismatch on outer envelope — discarding wrapper.",
+        "Inner payload integrity: VERIFIED",
+        "Decrypt complete."
+      ]
+    },
+    {
+      "key": "probe",
+      "lines": [
+        "Probing target node...",
+        "  Sending SYN packets on ports 22, 80, 443, 1337...",
+        "  Port 22:   RST received — closed",
+        "  Port 80:   SYN/ACK — OPEN",
+        "  Port 443:  SYN/ACK — OPEN (TLS 1.3)",
+        "  Port 1337: No response — filtered or stealth",
+        "OS fingerprint: unknown — non-standard stack detected",
+        "! Intrusion counter-probe detected on port 1337 — spoofing MAC.",
+        "!! Counter-probe neutralised.",
+        "Probe complete."
+      ]
+    }
+  ]
+}
