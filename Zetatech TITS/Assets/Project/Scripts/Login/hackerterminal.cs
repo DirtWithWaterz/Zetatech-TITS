@@ -4,14 +4,16 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;using TMPro;
+using UnityEngine.UI;
+using TMPro;
+using Unity.VisualScripting;
 
 namespace CyberpunkTerminal
 {
     public class HackerTerminal : MonoBehaviour
     {
 
-
+        public static HackerTerminal instance = null;
 
 //god i love headers and tooltips
         [Header("UI References")]
@@ -52,6 +54,12 @@ namespace CyberpunkTerminal
         public string RoomCode => _roomCode;
         private void Start()
         {
+            
+            if(instance == null)
+                instance = this;
+            else
+                Destroy(gameObject);
+
             RegisterCommands();
             StartCoroutine(BlinkCursor());
             StartCoroutine(RunIntro());
@@ -374,6 +382,6 @@ namespace CyberpunkTerminal
 
 //utils
         private string WrapColor(string text, Color color) => $"<color=#{ColorToHex(color)}>{text}</color>";
-        private string ColorToHex(Color c) => ColorUtility.ToHtmlStringRGB(c);
+        public static string ColorToHex(Color c) => UnityEngine.ColorUtility.ToHtmlStringRGB(c);
     }
 }

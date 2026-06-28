@@ -746,17 +746,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CyberpunkTerminal.HackerTerminal
   terminalDisplay: {fileID: 926266971}
   hiddenInput: {fileID: 1313090946}
-  scrollRect: {fileID: 0}
+  scrollRect: {fileID: 413550811}
   normalColor: {r: 1, g: 0, b: 0, a: 1}
-  dimColor: {r: 0.57254905, g: 0, b: 0, a: 1}
+  dimColor: {r: 0.5882353, g: 0, b: 0, a: 1}
   warningColor: {r: 1, g: 0.85, b: 0.1, a: 1}
-  errorColor: {r: 1, g: 0, b: 0.70585346, a: 1}
+  errorColor: {r: 1, g: 0.21960783, b: 0.8248837, a: 1}
   defaultCharDelay: 0.025
   fastCharDelay: 0.008
   onLoginComplete:
     m_PersistentCalls:
       m_Calls: []
-  debugSkipKey: 1
+  debugSkipKey: 95
   debugUsername: RUNNER
   debugRoomCode: DEBUG-01
 --- !u!1 &1313090945
